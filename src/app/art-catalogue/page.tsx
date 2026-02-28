@@ -96,16 +96,16 @@ export default function ArtCatalogue() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: (index % 3) * 0.1 }}
-                                className="group cursor-pointer bg-secondary/30 border border-white/5"
+                                className="group cursor-pointer bg-secondary/30 border border-white/5 rounded-md overflow-hidden"
                                 onClick={() => openModal(<InquiryForm artworkTitle={art.title} />)}
                             >
                                 <div className="relative aspect-[3/4] overflow-hidden">
                                     <img
                                         src={art.image}
                                         alt={art.title}
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                        className="w-full h-full object-cover transition-transform duration-800 group-hover:scale-115"
                                     />
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                                    <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-500" />
                                     <div className="absolute inset-x-0 bottom-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-black via-black/80 to-transparent">
                                         <button className="w-full bg-primary text-black font-bold uppercase tracking-widest py-3 text-[10px]">
                                             INQUIRE TO PURCHASE
